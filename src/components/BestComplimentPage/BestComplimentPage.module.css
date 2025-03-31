@@ -1,0 +1,14 @@
+.bestComplimentContainer {
+  background-color: #ffb6c1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bestComplimentText {
+  font-size: 3rem;
+  font-weight: bold;
+  color: oklch(0.586 0.253 17.585);
+}
