@@ -46,28 +46,28 @@ const ComplimentGenerator = () => {
         className={css.heart1}
         width="50"
         height="50"
-        src="../../../public/heart.svg"
+        src="/heart.svg"
         alt=""
       />
       <img
         className={css.heart2}
         width="57"
         height="57"
-        src="../../../public/heart-2.svg"
+        src="/heart-2.svg"
         alt=""
       />
       <img
         className={css.heart3}
         width="57"
         height="57"
-        src="../../../public/heart-3.svg"
+        src="/heart-3.svg"
         alt=""
       />
       <img
         className={css.heart4}
         width="50"
         height="50"
-        src="../../../public/heart-4.svg"
+        src="/heart-4.svg"
         alt=""
       />
       <Card>
@@ -75,9 +75,7 @@ const ComplimentGenerator = () => {
           <p className="text-lg font-semibold text-gray-800">{compliment}</p>
         </CardContent>
       </Card>
-      {!finished && (
-        <Button onClick={generateCompliment}>Нажми сюда ❤</Button>
-      )}
+      {!finished && <Button onClick={generateCompliment}>Нажми сюда ❤</Button>}
       {finished && showFinalButton && (
         <Button onClick={goToBestCompliment} className="mt-4">
           А теперь еще раз нажми))
