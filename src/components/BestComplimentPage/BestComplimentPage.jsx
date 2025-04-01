@@ -1,4 +1,5 @@
 import css from "./BestComplimentPage.module.css";
+
 const BestComplimentPage = () => {
   return (
     <div className={css.bestComplimentContainer}>

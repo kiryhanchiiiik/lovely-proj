@@ -1,22 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { compliments } from "../../../compliments";
 import Button from "../Button/Button";
 import Card from "../Card/Card";
 import CardContent from "../CardContent/CardContent";
-import { useNavigate } from "react-router-dom";
+import ImageWrapper from "../ImageWrapper/ImageWrapper";
 import css from "./ComplimentGenerator.module.css";
-
-const compliments = [
-  "Соняшник, ты — источник света и тепла в этом мире! ❤",
-  "Твоя доброта и нежность способны растопить любое сердце! 🤍",
-  "С тобой каждый момент наполняется гармонией и радостью! 💕",
-  "Твоя энергия и улыбка делают этот мир ярче и теплее! 💋",
-  "Ты как звезда, которая озаряет даже самые тёмные ночи! 💖",
-  "В твоих глазах можно найти целые вселенные! 🌹",
-  "Ты не просто красивая, ты — настоящий воплощённый идеал красоты и внутренней силы! 🥰",
-  "Ты не просто умная, ты умеешь вдохновлять на великие дела. 😛",
-  "Твоя улыбка — это лучшее лекарство от любого плохого настроения. 😻",
-  "Ты — пример того, как можно сочетать доброту, ум и красоту в одном человеке. 😍",
-];
 
 const ComplimentGenerator = () => {
   const [compliment, setCompliment] = useState("Сонь, нажми на кнопку 😘");
@@ -42,34 +31,7 @@ const ComplimentGenerator = () => {
 
   return (
     <div className={css.relative}>
-      <img
-        className={css.heart1}
-        width="50"
-        height="50"
-        src="/heart.svg"
-        alt=""
-      />
-      <img
-        className={css.heart2}
-        width="57"
-        height="57"
-        src="/heart-2.svg"
-        alt=""
-      />
-      <img
-        className={css.heart3}
-        width="57"
-        height="57"
-        src="/heart-3.svg"
-        alt=""
-      />
-      <img
-        className={css.heart4}
-        width="50"
-        height="50"
-        src="/heart-4.svg"
-        alt=""
-      />
+      <ImageWrapper css={css} />
       <Card>
         <CardContent>
           <p className="text-lg font-semibold text-gray-800">{compliment}</p>
